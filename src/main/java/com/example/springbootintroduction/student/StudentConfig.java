@@ -18,7 +18,7 @@ public class StudentConfig {
             Student nina = new Student(
                     "Nina",
                     "public-anal",
-                    LocalDate.of(2000, FEBRUARY, 5),
+                    LocalDate.of(2000, FEBRUARY, 10),
                     21
 
             );
@@ -28,8 +28,15 @@ public class StudentConfig {
                     LocalDate.of(2005, AUGUST, 5),
                     21
             );
+            Student maya = new Student(
+                    "Maya",
+                    "dildo-deepthroat",
+                    LocalDate.of(2007, DECEMBER, 12),
+                    21
+
+            );
             repository.saveAll(
-                    List.of(nina, miriam)
+                    List.of(nina, miriam, maya)
             );
         };
     }
