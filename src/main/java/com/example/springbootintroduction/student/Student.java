@@ -18,7 +18,7 @@ public class Student {
 
     private Long id;
     private String name;
-    private String fetish;
+    private String pet;
     private LocalDate dob;
     private Integer age;
 
@@ -27,21 +27,21 @@ public class Student {
     }
     public Student(Long id,
                    String name,
-                   String fetish,
+                   String pet,
                    LocalDate dob,
                    Integer age) {
         this.id = id;
         this.name = name;
-        this.fetish = fetish;
+        this.pet = pet;
         this.dob = dob;
         this.age = age;
     }
     public Student(String name,
-                   String fetish,
+                   String pet,
                    LocalDate dob,
                    Integer age){
         this.name = name;
-        this.fetish = fetish;
+        this.pet = pet;
         this.dob = dob;
         this.age = age;
     }
@@ -63,11 +63,11 @@ public class Student {
     }
 
     public String getFetish() {
-        return fetish;
+        return pet;
     }
 
-    public void setFetish(String fetish) {
-        this.fetish = fetish;
+    public void setFetish(String pet) {
+        this.pet = pet;
     }
 
     public LocalDate getDob() {
@@ -91,7 +91,7 @@ public class Student {
         return "Student{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
-                ", fetish='" + fetish + '\'' +
+                ", pet='" + pet + '\'' +
                 ", dob=" + dob +
                 ", age=" + age +
                 '}';

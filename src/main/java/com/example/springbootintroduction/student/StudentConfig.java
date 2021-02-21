@@ -17,20 +17,20 @@ public class StudentConfig {
         return args -> {
             Student nina = new Student(
                     "Nina",
-                    "public-anal",
+                    "dog",
                     LocalDate.of(2000, FEBRUARY, 10),
                     21
 
             );
             Student miriam = new Student(
                     "Miriam",
-                    "horse-cock",
+                    "horse",
                     LocalDate.of(2005, AUGUST, 5),
                     21
             );
             Student maya = new Student(
                     "Maya",
-                    "dildo-deepthroat",
+                    "cat",
                     LocalDate.of(2007, DECEMBER, 12),
                     21
 
