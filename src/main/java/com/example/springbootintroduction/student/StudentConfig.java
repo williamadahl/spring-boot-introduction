@@ -18,21 +18,18 @@ public class StudentConfig {
             Student nina = new Student(
                     "Nina",
                     "dog",
-                    LocalDate.of(2000, FEBRUARY, 10),
-                    21
+                    LocalDate.of(2000, FEBRUARY, 10)
 
             );
             Student miriam = new Student(
                     "Miriam",
                     "horse",
-                    LocalDate.of(2005, AUGUST, 5),
-                    21
+                    LocalDate.of(2005, AUGUST, 5)
             );
             Student maya = new Student(
                     "Maya",
                     "cat",
-                    LocalDate.of(2007, DECEMBER, 12),
-                    21
+                    LocalDate.of(2007, DECEMBER, 12)
 
             );
             repository.saveAll(
