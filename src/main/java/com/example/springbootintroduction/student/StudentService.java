@@ -3,9 +3,9 @@ package com.example.springbootintroduction.student;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.time.LocalDate;
-import java.time.Month;
+import javax.transaction.Transactional;
 import java.util.List;
+import java.util.Objects;
 import java.util.Optional;
 
 @Service
@@ -39,4 +39,22 @@ public class StudentService {
         }
         studentRepository.deleteById(id);
     }
+    @Transactional
+    public void updateStudent(Long id, String name, String pet){
+        Student student = studentRepository.findById(id)
+                .orElseThrow(() -> new IllegalStateException(
+                        "Student with  " + id +" does not exist"
+                ));
+        if (name != null && name.length() > 0 && !Objects.equals(student.getName(), name)){
+            student.setName(name);
+        }
+        if (pet != null && pet.length() > 0 && !Objects.equals(student.getPet(), pet)){
+            Optional <Student> studentOptional = studentRepository.findStudentByPet(pet);
+            if(studentOptional.isPresent()){
+                throw new IllegalStateException("Pet taken");
+            }
+            student.setPet(pet);
+        }
+    }
+
 }

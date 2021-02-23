@@ -17,23 +17,23 @@ public class StudentConfig {
         return args -> {
             Student nina = new Student(
                     "Nina",
-                    "dog",
+                    "Peach",
                     LocalDate.of(2000, FEBRUARY, 10)
 
             );
-            Student miriam = new Student(
-                    "Miriam",
-                    "horse",
+            Student dimesque = new Student(
+                    "Dimesque",
+                    "Valentina",
                     LocalDate.of(2005, AUGUST, 5)
             );
-            Student maya = new Student(
-                    "Maya",
-                    "cat",
+            Student sarah = new Student(
+                    "Sarah",
+                    "Femboi",
                     LocalDate.of(2007, DECEMBER, 12)
 
             );
             repository.saveAll(
-                    List.of(nina, miriam, maya)
+                    List.of(nina, dimesque , sarah)
             );
         };
     }
